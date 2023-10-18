@@ -1,0 +1,38 @@
+<div>
+
+<!--   <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Home Page</a>
+    
+    <div class="navbar-nav mr-auto">    
+      <li class="nav-item">
+        <a routerLink="cursos" class="nav-link">Cursos</a>
+      </li>
+      
+      <li class="nav-item">
+        <a routerLink="add" class="nav-link">Agregar</a>
+      </li>
+    </div>
+  </nav> -->
+  
+  
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a href="#" class="navbar-brand">
+    <img src="data:image/png;base64,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" alt="Nombre de la imagen" width="30" height="30" class="d-inline-block align-top">
+    Home Page
+  </a>
+
+  <div class="navbar-nav mr-auto">    
+    <li class="nav-item">
+      <a routerLink="cursos" class="nav-link">Cursos</a>
+    </li>
+    
+    <li class="nav-item">
+      <a routerLink="add" class="nav-link">Agregar</a>
+    </li>
+  </div>
+</nav>
+  
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

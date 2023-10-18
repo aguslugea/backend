@@ -1,0 +1,185 @@
+/* import { Component, OnInit } from '@angular/core';
+import { Curso } from 'src/app/models/curso.model';
+import { CursoService } from 'src/app/services/curso.service';
+
+@Component({
+  selector: 'app-curso-add',
+  templateUrl: './curso-add.component.html',
+  styleUrls: ['./curso-add.component.css']
+})
+export class CursoAddComponent implements OnInit {
+  curso: Curso = {
+    nombre: '',
+    fechaInicio: undefined,
+    idDocente: undefined,
+    tema: {
+      id: undefined
+    }
+  };
+
+  temas: any[] = [{
+    "id": 1,
+    "nombre": "Programación en C++",
+    "duracion": 12
+  },
+  {
+    "id": 2,
+    "nombre": "Diseño de Sistemas",
+    "duracion": 36
+  }];
+
+  successMessage: string = '';
+  errorMessage: string = '';
+  submitted = false;
+  datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+
+  constructor(private cursoService: CursoService) { }
+
+
+  saveCurso(): void {
+    if (!this.validarFormatoFecha()) {
+      console.log('Formato de fecha no válido');
+      return;
+    }
+
+    const data = {
+      nombre: this.curso.nombre,
+      fechaInicio: this.curso.fechaInicio,
+      idDocente: this.curso.idDocente,
+      tema: this.curso.tema
+    };
+
+    this.cursoService.create(data).subscribe({
+  next: (res) => {
+    console.log('Curso guardado exitosamente', res);
+    this.successMessage = 'Curso guardado exitosamente';
+    this.submitted = true;
+  },
+  error: (error) => {
+    console.error('Error al guardar el curso', error);
+    this.errorMessage = 'Error al guardar el curso';
+  }
+ });
+  }
+
+  newCurso(): void {
+    this.submitted = false;
+    this.curso = {
+      nombre: '',
+      fechaInicio: undefined,
+      idDocente: undefined,
+      tema: {
+        id: this.temas.length > 0 ? this.temas[0].id : undefined
+      }
+    };
+  }
+
+validarFormatoFecha(): boolean {
+    if (!this.curso.fechaInicio) {
+      return true; // Campo vacío, no se valida
+    }
+
+    // Convierte la fecha ingresada en una cadena de texto
+    const fechaTexto = this.curso.fechaInicio.toString();
+
+    // Aplica la expresión regular al texto de la fecha
+    const matches = fechaTexto.match(this.datePattern);
+    
+    if (!matches || matches.length !== 4) {
+      return false; // No coincide con el formato
+    }
+    
+    const day = parseInt(matches[1], 10);
+    const month = parseInt(matches[2], 10);
+    const year = parseInt(matches[3], 10);
+    
+    // Verifica si la fecha es válida (puede personalizar esto según sus necesidades)
+    return (
+      day >= 1 &&
+      day <= 31 &&
+      month >= 1 &&
+      month <= 12 &&
+      year >= 1900 &&
+      year <= new Date().getFullYear()
+    );
+  }
+}
+*/
+import { Component, OnInit } from '@angular/core';
+import { Curso } from 'src/app/models/curso.model';
+import { CursoService } from 'src/app/services/curso.service';
+
+
+
+@Component({
+  selector: 'app-curso-add',
+  templateUrl: './curso-add.component.html',
+  styleUrls: ['./curso-add.component.css']
+})
+export class CursoAddComponent implements OnInit {
+  curso: Curso = <Curso>{
+    nombre: '',
+    fechaInicio: new Date(),
+    idDocente: undefined, //campo obligatorio
+    tema: {
+            id: 2 //campo obligatorio
+        }
+  };
+  submitted = false;
+   temas: any[] = [{
+    "id": 1,
+    "nombre": "Programación en C++",
+    "duracion": 12
+  },
+  {
+    "id": 2,
+    "nombre": "Diseño de Sistemas",
+    "duracion": 36 }];
+ 
+ docentes = [
+  { id: 1, nombre: 'Sergio Viera' },
+  { id: 2, nombre: 'Santiago Raggazzo' },  ];
+
+  successMessage: string = '';
+  errorMessage: string = '';
+  datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+  
+  
+  
+  constructor(private cursoService: CursoService) { }
+  ngOnInit(): void {
+  }
+  saveCurso(): void {
+	const data = {
+		"id": this.curso.id,
+    	"nombre": this.curso.nombre,
+    	"fechaInicio": this.curso.fechaInicio,
+    	"idDocente": this.curso.idDocente ,
+    	"tema": this.curso.tema
+	};	
+    this.cursoService.create(data)
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          this.submitted = true;
+        },
+        error: (e) =>
+        {
+        	console.error('Error al guardar el curso', Error);
+             this.errorMessage = 'Error al guardar el curso - Verifique los datos ingresados';
+		} 
+      });
+  }
+  newCurso(): void {
+    this.submitted = false;
+    this.curso = <Curso>{
+    	nombre: '',
+    	fechaInicio: new Date(),
+    	idDocente: 1, //campo obligatorio
+    	tema: {
+            id: 2 //campo obligatorio
+        }
+    };
+  }
+
+}

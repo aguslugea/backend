@@ -1,0 +1,111 @@
+<html>
+
+<body>
+    <h1>Agregar Curso</h1>
+    <p>Ingrese los datos del nuevo curso.</p>
+</body>
+</html>
+
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="curso.nombre"
+          name="title"
+          #nombreInput
+        />
+         Agregar la validación de longitud mínima
+        <div *ngIf="nombreInput.value && nombreInput.value.length < 4" class="text-danger">
+          El nombre debe tener al menos 4 caracteres.
+        </div> 
+      </div>
+      
+      <div class="form-group">
+        <label for="date_range">Fecha inicio</label>
+        <input
+          type="text"
+          class="form-control"
+          id="date_range"
+          required
+          [(ngModel)]="curso.fechaInicio"
+          name="date_range"
+          autocomplete="off"
+        />
+       <!--  <p *ngIf="!validarFormatoFecha()" class="text-danger">Formato de fecha incorrecto. Debe ser DD/MM/AAAA.</p> -->
+      </div>
+
+      <div class="form-group">
+        <label for="title">Docente</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="curso.idDocente"
+          name="title"
+        />
+      </div>
+      
+      <div class="form-group" *ngIf="curso.tema">
+        <label for="tema">Tema</label>
+        <select class="form-control" id="tema" [(ngModel)]="curso.tema.id" name="tema">
+          <option *ngFor="let tema of temas" [value]="tema.id">{{ tema.nombre }}</option>
+        </select>
+        <small class="form-text text-muted">Selecciona el tema del curso.</small>
+      </div>
+      
+      <button (click)="saveCurso()" class="btn btn-success" [disabled]="!curso.nombre || !curso.fechaInicio || !curso.idDocente || !curso.tema?.id">Guardar</button>
+      
+      Mostrar mensajes de éxito o error
+      <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+      </div>
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+    </div>
+    <div *ngIf="submitted">
+      <h4>Curso fue enviado exitosamente!</h4>
+      <button class="btn btn-success" (click)="newCurso()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="curso.nombre"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="content">Fecha inicio</label>
+        <input
+          class="form-control"
+          id="content"
+          required
+          [(ngModel)]="curso.fechaInicio"
+          name="content"
+        />
+      </div>
+      <button (click)="saveCurso()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>Curso was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newCurso()">Add</button>
+    </div>
+  </div>
+</div>

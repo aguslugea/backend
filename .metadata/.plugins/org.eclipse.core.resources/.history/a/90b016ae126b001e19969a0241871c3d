@@ -1,0 +1,121 @@
+<div *ngIf="viewMode; else editable">
+				
+
+  
+ <div *ngIf="currentElement.id"> 
+    <h4>UTN Facultad Regional Delta</h4>
+     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAw1BMVEVJtZH////7/////f5LtZFHt5FOs5FMp4tBtY5wuqHt/vs/t4+Jwq9Gso6Vz7xKq4vK6d+IybSRxrTO7+j2////+v34//5GrotNrIzo//3n//qGxK+Zzbyj2Mc+sY1psZlbrpJ3vKXi//lUp4vE9eyQ076469ug3srL6uFusJz/+P/L8efo9vNUspK639V8walgqI++5dk7vZHT+O6s3s6hz8LC7N/J49vc8+5yv6aBuahkuZyHq5+syb/W4N+dvLSQvLBXiF3MAAAO2klEQVR4nO2dC1ejuhbHISFAoRRtw8O22tecuWpHbW11qt5z7v3+n+pm0+qozQ6IhOpd/Jczs5ZDgB9JdnZeO4bRqFGjRo0aNWrUqFGjRo0aNWrUqFGjRo0aNfq/FBM/mCwmTSF+r5a4qSVP52MpDCZJUZFCB9MsFY/dh2T2LMQTCaUpM2wJYTBzsHTZozTJ+XFycuLJ9SOx2D5h8NdJv4+kyNT/mTAJod068bAnnfzrTFpeKiGcRxGVy9ykhoQwGZpYip3OQxlhcGFeoo861UeYCMKYSEV/2bLHBh0zkid4TneUSEopY5M4ItQ0TUkKchroAjTCOYWnykT7V76kegQdgqXY6ShhkPlvkzL3hmMJKBlqJDwyUURv7EsyEQjRJM+EbJ+QdQmaggxdbYTJNcFel/KWpBpuCVWASB4md4IEeRIZaCNkZ4IwQp8raSyK5eE+ofiWlCLlm5IbX9aEViL3Ds9DUf9lrUU+YbhHKG6T9CI0D+OWb2lrENtmFCNvSpaJv5+gBKEFDk3YxwBNM17c2toIwYYjz6XTUGJqyhK2OE7ozfTlIRvzCLP+lI+qKaVAmAxFs4el6KUym1aN/LCP1X8zMjvlLI2UUDRLKOFS6h9WRdjDm3zxZH/vyWUsjW2wtK9wFO4CmdWuRiy5NvEnQ5tfAaHoNwU3HK0MNG7LjHZVhO4wxl6XUH4c7D25DCHzkzWRE0LJ9UaGzMevSH4LdReFaTgKLeNdASpHOPag3ZVURPC8pw7TVw8tP+3jhJH3ZL/vBZeyNG6HmhhhLL6jRkLR9Z5jXhtgrJMg/XweGs4KeYgwsJHcd6qQ8BQxNRlGf8/WlCFMbriCkE+0EhruhOOEhNz5t2+vL9NaOHOCE5LpTDYeVCGhM1UQQoPx1p8qQZi0OdraC8JlamvMQ1HFwyXacRM+sXC/mfXaaSxBOFtR1PkVjv+xpTMPfdsIBqLhw5pjQuNH17Y/QSgctlNOI7TRjbyxvg4+6AraKooPZVC6mr1pjj9GaBm3bOQpRgWovI9WLaHwNxSAlF+HlvsH8YOElu/0YPgRuzjig0ArIbOZzx5wQwD+Nz9O2Z9c/BghY+k6FtYEv/10ptWQGvAuzNkoXkGoPxIW6dm5KU5owwRHMkQaI/h2RPTQ1onGOYtnyvAO9b4zxasxe8nF4oQwExNMTtCPJwiFjZuwGgiNxQlq60CEQCd8NzxcnJD5ftLq42UUCMl8VgOhYYi6gvkcGSEl9zObfZiQBRdTYasUNSDmN7ZsYL1iWUYw4tuPihFS8a2t7E1YQUIYughaAKi6Nt6ErAZCUcHC3yKfUN8R4ElvkfnHzO2YSGd2dyUQWlALgwnaMdteKUx4VzfcM6Fx4UXoiNTuc/cnMAVmB3+pCbM8tPxbFnZPYmUGiv7nJq2J0PKTJcFdx0xRdPJXIoxHXh7CqL5vMddZ8lhdRIlwSbU2ha8IbZc99dXTLUBFlovA94sQGunjhoBDr7qQRvOkBjO6JWRgTnMIxRuZ3tA56xBTXQ/vEzZbezDhoygV4n5RPAkkk8W6ZC82yg++e3v+YzJUvrm46GjWmfK8m0H2Lp16CulWftJFRxpevxbxfqFzSDvCXz1xp5w5Rmhx+iNLNgWrS4yF9+pymr19FMHQkTqDovjyMqcdBCeCd0KtwzPvJfoYoxxjs/OzTJrXCIhr4pyvIBrDuSM+a5310GBpB4ZncyCrkiij+lYnYIQsXPLLnFaxKj7Ku0mdRXRL6DNnGuVam2rEl06dVgYE413MmHh5i2WqEVmN68XbIgrGpIP2yKujEx6DNwo0rk1QUfrh9XZ0QSehaFNhwrDmQrqV7RsLxSKpihSRoXRNYB2COa7FSj1o82kRfg1rPA5RRjNCxsY9rY0i5etQ2G2rxrb+rUQujlf5Png5gUNEljOYLTlQHm4Zg9F0u661ekIz4suXMa3DETJ7vInxuZSydNu1ssvQcN1DZmBGyILFPLeDV4IwJnztML9uZ0ZGyM5my7xVpGUI+V22BOmwObgVM5xsQqUyowprS6nXTlz/K+CBmOUc90lFdVFYUNF1JquW1unsjymbNWqtKspCYUJhun7sZtttDs22U1aW0nU1frgooHzaSV+2AH0NWTA5FrahpEI7XZaURtmgE5+PkmxO4P0asoPKEpUmXSx5Zm9K2xzRVeK8fzf7KgbmtQShYdvJw4rQSDVPrQbkEfV+jhxD72qEkoJpbeYbs7tfn2gbY7J5dGzRzB+aRiYLLJ/oA7iz4RRdcJOXh5t26MIo1+FKaQHbJlycdNjfTuYWdQIyL9Qk85ugwKo8rSbWhu9r54j5gTM+7pEoFlWy2GBcJC7kvx/DvFtnEn0p+0rbbgQjcP08iSuY74at9dQrWlqJt+o8nd2KdAXkuhpnuoOnx4tJK0eTTK3W6N9/b+JCpZT+85+L0cPDw+Qi797b+9uutlLq/ODK7ZKZYviJubgyLtj2b2uh+BfZvflO/DjRBWiEPTP/pf/sZi3aarzZApt/tdk1tmuMdBDO8UUmtYmSbqCPsKd9eLSA/u8J9echOXRJrYFQy9jhlyI8bFGtp5Q2eahTTR5+f8ImD78/YZOH35+wycPvT9jk4fcnbPLw+xM2efj9CZs8/P6ETR5WQXjYkSiteZh8ifFSs6tvZiabt4Cn5E2efPClC03IPN9XNyHkIaW5rwKTLMVZCxNmkzdEK+FuUimbvybPf+3+JrvfmtslNYUJqfkqffaPubvNy+2fv0E2nxV3z3QBZnNPBT747pIYVKTavkpTRLwbaJsDZg/H3eMi2l7V/u/fv3IJSfzP3497SZW60rdUyme2HQQ5e6wC5rr+rZ84k/VUteF7V0QpiXkvm8V3g6BIBbNTnWtRst1AOfG5ryzr6ioc3fWIGeUvyIR6LS7j/3RniX/LXDSK95uA3voAM0i1DJF/4ePSg6UmyggJfyDjbM7fW49DiN6T9wDGbHl09Cqk+IDwX9Z2zXLYPve4QItzN06au0VF0ASYhHvXT1lQ4TwCjYRKCULI42Qyj3d+wUfdH2qe/Hw6c/ejL34JwepLww6Sp3uiChKUg0hp/3Qc3PoH2yKjkAWLsYL01Ito+TXtJI4is98Ov8T6/PeC6hMONopAZIXykHsQYfJJbzyvEsqCINmL6+cN7KX7H7CZUbhm/W5oiKb30Fh/BAGQjPRxmr9Dv4ggvg2/XwQH3yzzSjbzjbDDLyvacAG+PZm2zr7SQmFmLZacXlYHCDE1huHXyUQ/WPSEB1rRriCa9c2E0Vkn7G0QxoMIGgnLneSEcCtHSs5Td7tp/KCIwsgkj1Mt+/Ip6Y0lJ0PUDchYOlDFcvwMYURX40R8wsM2Gyxp80/sA1Ij0vjXyK41pMk7QVdJAOqAywR1u7+AsE0HqokQvDuZ9PWGcIGYGAfbwwZ90YtpXKiXW54w7jkHa/otZo826ghCFRBG9D49VIthsbSnfxIjgqbfrp0QduJlAWPrCMFD+SCtvVHM4o0mw8q34SPyWvrG8XFGZrQgPmQdgDRaaR0jlQMa9mxDorqCfcXr2jsazHLWZs7My3ZAKu8j0LzbZHEm+QD2Ptfp3LBg4tGc4YrtdFhOkKXtFsW8okDjzdio1UEVbT16BsWLYIdlNiahen+ajf3nBYYUN4EoIPUBGiw8jXO79BD7of/bVFZWSjfXXpwTujS7znusdeTGHakCsz9/eeKdzjo8Jw/PZ6MjnrfZFG7Rq8vYgKtvhUt1/cpGIuL5UwCxoNWfYpm44WC6DVSrjEFrDt2aYtCKLlOAnVTyLM6jiA9ntpHkEsIJj8HsmuRVRkL7VzUNFEMEjHP0dMKdIjodwc7zQoS25YdtiFCoupJE5l1thG47psrowMK6Lx3fhQhLhQht33dHK7UPKD4pnGVVByCcvqaKWA5AEGUtGyUrcNJqCEH4hfEaz3M+GiF3iVGDBy4KqXrgQrynd+oYfvHTH3YvnZ5ncVFQRBp7i1oGbViyVBan6DI+fQmAVJzQMuzFnCjDohE+DOqYPmUtT/XOwgZdhy8jKx8gFNkzW8XYSa5m1ihu0jqGbMK10o+EMHKW8bxy8EOELIAQhcjV2Rkl5Ebj2YcgBoVv1jfR01bB+1rNXi2N/OA5M+DPZ3GY5ISU3ms+hQUIk+MYzUIwFN7oqvRJOqKOd5XrxKg31ltIgdC5xwupsBO8m7yOYvPh854SCN+HNqFR3NE8niFc0pGnMHcR+Zm8MQUfJnTHfaJYaETnmsNeWyzoKmLrgdtxa7ye8/toKWWWLVpblDCOvCe9octtli3AxMTj4bsTGsqcnXeEr+cgcHS81uEMi42R0wG32oT+pwnZBe6gCnN6D8VUnz21goGy39T1KyAM8VihohvZn2kNxWcla4XHRjepX8FJq67iwFoSxTc6D8sV37enKECkEzDr04Sirh9hmQiRd9cB03keMJx+iBL2w73PW+YcUiu4iSMkopJweHqhRreGuRP8TGdC1nY1hIYzNZE5LUHYH+skDIb42UaEP+wXnnLnctunaIxQQvhEG1/WNUQJKdlAYON3K3xKnXjM2ChWEHY1tvksXKF2nNJrictYitCw0o3Cc1u7+jr6zDnBCcngrDLC5FoxgHV0pnEoo6UY6pZ2bMpYGkimOvV4k+jzaexJHKFnAa9kXn8pQsbcJ7RVMqOT1NZGCB0L7BBNsj6TWPGShCycogkoH+urhmd36CSRcGhkfdOSpdRIl/hKMj7RN/Z9do0TxjdVEoKpQRLQeKBviiZREPKRzFcsSciCO7ybT9qutnW14W+KE0rHiMoSul10WTyNO642U5PMqSkdaRNOljf2JUY8m5lRTpGey0wwYwOCjXdRcqqvlIbzKCJUrl+O7NSpYGhSE0mx3XF7LusqMDYhFHlSZJ5KXIuKlP4gaCTclfPeJwUlQ64OnRvPQ9moC3vi6JPitT5C+6E9GLT3NADd2IasdjxBAvj//WTbtDe2zAcLrGMkgbjZg74uPkSaFn+kMmD36F4KxgIswVaB9Bxqy/YDG0nhu8zX59Q0atSoUaNGjRo1atSoUaNGjRo1atSoUaNGjQ6l/wGTeilOMNtyDQAAAABJRU5ErkJggg==" 
+     alt="Nombre de la imagen" width="120" height="35" class="d-inline-block align-top">
+    <div>
+      <label><strong>Nombre Curso:</strong></label> {{ currentElement.nombre }}
+    </div>
+    
+   <!--  <div>
+  <label><strong>Docente:</strong></label> {{ docentes[currentElement.idDocente] }}
+   </div> --> 
+    
+  <div>
+  <label><strong>Docente:</strong></label>
+  <span *ngIf="currentElement.idDocente === 1"> Sergio Viera</span>
+  <span *ngIf="currentElement.idDocente === 2"> Santiago Raggazzo</span>
+  <span *ngIf="currentElement.idDocente === 3"> Marcelo Badino</span>
+</div>
+
+    
+   <div>
+  <label><strong>Fecha inicio:</strong></label>
+  {{ currentElement.fechaInicio | date:'dd/MM/yyyy' }}
+</div>
+    <div>
+      <label><strong>Tema:</strong></label>
+      {{ currentElement.tema == null ? "-" : currentElement.tema.nombre + " (" + currentElement.tema.id + ")" }}
+    </div>
+    
+    <a class="m-3 btn btn-sm btn-warning" routerLink="/cursos/{{ currentElement.id }}">Editar</a>
+    
+    <button (click)="deleteElement()" class="m-3 btn btn-sm btn-danger" >Eliminar</button>
+  
+  </div>
+  
+
+  
+  <div *ngIf="!currentElement.id">
+    <br />
+    <p>Seleccione un Curso para visualizar los datos</p>
+  </div>
+</div>
+<ng-template #editable>
+  <div *ngIf="currentElement.id" class="edit-form">
+    <h4>Edición de Registro Curso</h4>
+
+    <form>
+      <div class="form-group">
+        <label for="title">Nombre del curso</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentElement.nombre"
+          name="title"
+          #nombreInput
+          [ngClass]="{'valid-input': nombreInput.value && nombreInput.value.length >= 4, 'invalid-input': nombreInput.value && nombreInput.value.length < 4}"
+        />
+        <!-- Agregar la validación de longitud mínima -->
+        <div *ngIf="nombreInput.value && nombreInput.value.length < 4" class="text-danger">
+          El nombre del curso debe tener al menos 4 caracteres.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="date_range">Fecha inicio:</label>
+        <input
+          type="date"
+          class="form-control"
+          id="date_range"
+          [(ngModel)]="currentElement.fechaInicio"
+          name="date_range"      
+          (change)="validateFechaInicio()"
+          #fechaInicioInput
+          
+        />
+         <small class="form-text text-muted">Seleccione una fecha desde el calendario, caso contrario se cargara con la fecha de hoy.</small>
+          <div *ngIf="fechaInicioInvalid" class="text-danger">La fecha no puede ser menor que la fecha actual.</div>
+      </div>
+      
+      
+      <!-- <div class="form-group">
+        <label><strong>Docente id:</strong></label>
+        {{ currentElement.idDocente == 0 ? "" : currentElement.idDocente }}
+      </div> -->
+      
+     <div>
+  <label><strong>Docente:</strong></label>
+  <span *ngIf="currentElement.idDocente === 1"> Sergio Viera</span>
+  <span *ngIf="currentElement.idDocente === 2"> Santiago Raggazzo</span>
+  <span *ngIf="currentElement.idDocente === 3"> Marcelo Badino</span>
+</div>
+ <small class="form-text text-muted">Si requiere un cambio de Docente contacte a Secretaria.</small>
+    </form>
+
+   <!--  <button type="submit" class="badge badge-success mb-2" (click)="updateElement()" > Actualizar </button> -->
+
+ <button type="submit" (click)="updateElement()" class="btn btn-success"
+  [disabled]="!currentElement.nombre || currentElement.nombre.length < 4 || !currentElement.fechaInicio|| fechaInicioInput.value == 'dd/mm/aaaa'"> Actualizar</button>
+
+    <div *ngIf="successMessage" class="alert alert-dismissible alert-success">
+      <button type="button" class="close" (click)="clearMessage()">&times;</button>
+      {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-dismissible alert-danger">
+      <button type="button" class="close" (click)="clearMessage()">&times;</button>
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="!currentElement.id">
+      <br />
+      <p>Elemento no encontrado...</p>
+    </div>
+  </div>
+</ng-template>
+

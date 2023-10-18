@@ -1,0 +1,18 @@
+.list-item {
+
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  transition: background-color 0.3s; 
+}
+
+.list-item:hover {
+ 
+  background-color: lightblue;
+  cursor: pointer; 
+}
+
+.highlighted-course {
+  background-color: #ffffcc; /* Cambia el color de fondo según tus preferencias */
+  transition: background-color 0.3s ease;
+}
